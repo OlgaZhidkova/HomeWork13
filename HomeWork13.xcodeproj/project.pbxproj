@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		776C7853276A4D9B004102BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7852276A4D9B004102BA /* AppDelegate.swift */; };
-		776C7855276A4D9B004102BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7854276A4D9B004102BA /* SceneDelegate.swift */; };
 		776C7857276A4D9B004102BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7856276A4D9B004102BA /* ViewController.swift */; };
 		776C785A276A4D9B004102BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776C7858276A4D9B004102BA /* Main.storyboard */; };
 		776C785C276A4D9E004102BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776C785B276A4D9E004102BA /* Assets.xcassets */; };
 		776C785F276A4D9E004102BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776C785D276A4D9E004102BA /* LaunchScreen.storyboard */; };
+		776C7868276A50E0004102BA /* MedialibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7867276A50E0004102BA /* MedialibraryViewController.swift */; };
+		776C786A276A50F9004102BA /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7869276A50F9004102BA /* ForYouViewController.swift */; };
+		776C786C276A5112004102BA /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C786B276A5112004102BA /* AlbumsViewController.swift */; };
+		776C786E276A5122004102BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C786D276A5122004102BA /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		776C784F276A4D9B004102BA /* HomeWork13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		776C7852276A4D9B004102BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		776C7854276A4D9B004102BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		776C7856276A4D9B004102BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		776C7859276A4D9B004102BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		776C785B276A4D9E004102BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		776C785E276A4D9E004102BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776C7860276A4D9E004102BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776C7867276A50E0004102BA /* MedialibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedialibraryViewController.swift; sourceTree = "<group>"; };
+		776C7869276A50F9004102BA /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		776C786B276A5112004102BA /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		776C786D276A5122004102BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,8 @@
 		776C7851276A4D9B004102BA /* HomeWork13 */ = {
 			isa = PBXGroup;
 			children = (
+				776C7866276A507F004102BA /* TabBar Controllers */,
 				776C7852276A4D9B004102BA /* AppDelegate.swift */,
-				776C7854276A4D9B004102BA /* SceneDelegate.swift */,
 				776C7856276A4D9B004102BA /* ViewController.swift */,
 				776C7858276A4D9B004102BA /* Main.storyboard */,
 				776C785B276A4D9E004102BA /* Assets.xcassets */,
@@ -65,6 +71,17 @@
 				776C7860276A4D9E004102BA /* Info.plist */,
 			);
 			path = HomeWork13;
+			sourceTree = "<group>";
+		};
+		776C7866276A507F004102BA /* TabBar Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				776C7867276A50E0004102BA /* MedialibraryViewController.swift */,
+				776C7869276A50F9004102BA /* ForYouViewController.swift */,
+				776C786B276A5112004102BA /* AlbumsViewController.swift */,
+				776C786D276A5122004102BA /* SearchViewController.swift */,
+			);
+			path = "TabBar Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				776C7857276A4D9B004102BA /* ViewController.swift in Sources */,
+				776C786E276A5122004102BA /* SearchViewController.swift in Sources */,
 				776C7853276A4D9B004102BA /* AppDelegate.swift in Sources */,
-				776C7855276A4D9B004102BA /* SceneDelegate.swift in Sources */,
+				776C786C276A5112004102BA /* AlbumsViewController.swift in Sources */,
+				776C7868276A50E0004102BA /* MedialibraryViewController.swift in Sources */,
+				776C786A276A50F9004102BA /* ForYouViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
