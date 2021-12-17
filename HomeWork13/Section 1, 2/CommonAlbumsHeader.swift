@@ -1,5 +1,5 @@
 //
-//  MyAlbumsHeader.swift
+//  CommonAlbumsHeader.swift
 //  HomeWork13
 //
 //  Created by Ольга on 17.12.2021.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class MyAlbumsHeader: UICollectionReusableView {
+class CommonAlbumsHeader: UICollectionReusableView {
     
-    static let identifier = "MyAlbumsHeader"
+    static let identifier = "CommonAlbumsHeader"
     
     private let headerLabel: UILabel = {
         let lable = UILabel()
-        lable.text = "Мои альбомы"
+        lable.text = "Общие альбомы"
         lable.textAlignment = .left
         lable.font = .systemFont(ofSize: 22, weight: .semibold)
         lable.textColor = .black
@@ -30,17 +30,13 @@ class MyAlbumsHeader: UICollectionReusableView {
     }()
     
     func configure() {
-        
         addSubview(headerLabel)
         addSubview(buttonLabel)
-        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         headerLabel.frame = bounds
-        buttonLabel.frame = bounds 
-        
+        buttonLabel.frame = bounds
     }
-        
 }
