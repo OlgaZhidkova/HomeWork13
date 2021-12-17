@@ -21,6 +21,10 @@
 		776C787A276A902A004102BA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7879276A902A004102BA /* Item.swift */; };
 		776C787D276C95E7004102BA /* MyAlbumsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C787C276C95E7004102BA /* MyAlbumsHeader.swift */; };
 		776C787F276CC156004102BA /* CommonAlbumsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C787E276CC156004102BA /* CommonAlbumsHeader.swift */; };
+		776C7882276D194B004102BA /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7881276D194B004102BA /* ListItem.swift */; };
+		776C7884276D1A79004102BA /* MediaTypeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7883276D1A79004102BA /* MediaTypeHeader.swift */; };
+		776C7887276D1CE8004102BA /* MediaTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7885276D1CE8004102BA /* MediaTypeCollectionViewCell.swift */; };
+		776C7888276D1CE8004102BA /* MediaTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776C7886276D1CE8004102BA /* MediaTypeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		776C7879276A902A004102BA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		776C787C276C95E7004102BA /* MyAlbumsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsHeader.swift; sourceTree = "<group>"; };
 		776C787E276CC156004102BA /* CommonAlbumsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlbumsHeader.swift; sourceTree = "<group>"; };
+		776C7881276D194B004102BA /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		776C7883276D1A79004102BA /* MediaTypeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeHeader.swift; sourceTree = "<group>"; };
+		776C7885276D1CE8004102BA /* MediaTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		776C7886276D1CE8004102BA /* MediaTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaTypeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				776C787B276A9055004102BA /* Section 1, 2 */,
+				776C7880276D18CC004102BA /* Section 3 */,
 				776C7866276A507F004102BA /* TabBar Controllers */,
 				776C7852276A4D9B004102BA /* AppDelegate.swift */,
 				776C7856276A4D9B004102BA /* ViewController.swift */,
@@ -105,6 +114,17 @@
 				776C787E276CC156004102BA /* CommonAlbumsHeader.swift */,
 			);
 			path = "Section 1, 2";
+			sourceTree = "<group>";
+		};
+		776C7880276D18CC004102BA /* Section 3 */ = {
+			isa = PBXGroup;
+			children = (
+				776C7885276D1CE8004102BA /* MediaTypeCollectionViewCell.swift */,
+				776C7886276D1CE8004102BA /* MediaTypeCollectionViewCell.xib */,
+				776C7881276D194B004102BA /* ListItem.swift */,
+				776C7883276D1A79004102BA /* MediaTypeHeader.swift */,
+			);
+			path = "Section 3";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +189,7 @@
 				776C785F276A4D9E004102BA /* LaunchScreen.storyboard in Resources */,
 				776C785C276A4D9E004102BA /* Assets.xcassets in Resources */,
 				776C785A276A4D9B004102BA /* Main.storyboard in Resources */,
+				776C7888276D1CE8004102BA /* MediaTypeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,10 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776C7887276D1CE8004102BA /* MediaTypeCollectionViewCell.swift in Sources */,
 				776C7878276A9012004102BA /* MyAlbumsCollectionViewCell.swift in Sources */,
 				776C7857276A4D9B004102BA /* ViewController.swift in Sources */,
 				776C786E276A5122004102BA /* SearchViewController.swift in Sources */,
+				776C7884276D1A79004102BA /* MediaTypeHeader.swift in Sources */,
 				776C7853276A4D9B004102BA /* AppDelegate.swift in Sources */,
+				776C7882276D194B004102BA /* ListItem.swift in Sources */,
 				776C786C276A5112004102BA /* AlbumsViewController.swift in Sources */,
 				776C7868276A50E0004102BA /* MedialibraryViewController.swift in Sources */,
 				776C786A276A50F9004102BA /* ForYouViewController.swift in Sources */,
