@@ -16,6 +16,10 @@
 		776C786A276A50F9004102BA /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7869276A50F9004102BA /* ForYouViewController.swift */; };
 		776C786C276A5112004102BA /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C786B276A5112004102BA /* AlbumsViewController.swift */; };
 		776C786E276A5122004102BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C786D276A5122004102BA /* SearchViewController.swift */; };
+		776C7877276A9012004102BA /* MyAlbumsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776C7875276A9012004102BA /* MyAlbumsCollectionViewCell.xib */; };
+		776C7878276A9012004102BA /* MyAlbumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7876276A9012004102BA /* MyAlbumsCollectionViewCell.swift */; };
+		776C787A276A902A004102BA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7879276A902A004102BA /* Item.swift */; };
+		776C787D276C95E7004102BA /* MyAlbumsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C787C276C95E7004102BA /* MyAlbumsHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		776C7869276A50F9004102BA /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		776C786B276A5112004102BA /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		776C786D276A5122004102BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		776C7875276A9012004102BA /* MyAlbumsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAlbumsCollectionViewCell.xib; sourceTree = "<group>"; };
+		776C7876276A9012004102BA /* MyAlbumsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlbumsCollectionViewCell.swift; sourceTree = "<group>"; };
+		776C7879276A902A004102BA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		776C787C276C95E7004102BA /* MyAlbumsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		776C7851276A4D9B004102BA /* HomeWork13 */ = {
 			isa = PBXGroup;
 			children = (
+				776C787B276A9055004102BA /* Section 1 */,
 				776C7866276A507F004102BA /* TabBar Controllers */,
 				776C7852276A4D9B004102BA /* AppDelegate.swift */,
 				776C7856276A4D9B004102BA /* ViewController.swift */,
@@ -82,6 +91,17 @@
 				776C786D276A5122004102BA /* SearchViewController.swift */,
 			);
 			path = "TabBar Controllers";
+			sourceTree = "<group>";
+		};
+		776C787B276A9055004102BA /* Section 1 */ = {
+			isa = PBXGroup;
+			children = (
+				776C7876276A9012004102BA /* MyAlbumsCollectionViewCell.swift */,
+				776C7875276A9012004102BA /* MyAlbumsCollectionViewCell.xib */,
+				776C7879276A902A004102BA /* Item.swift */,
+				776C787C276C95E7004102BA /* MyAlbumsHeader.swift */,
+			);
+			path = "Section 1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776C7877276A9012004102BA /* MyAlbumsCollectionViewCell.xib in Resources */,
 				776C785F276A4D9E004102BA /* LaunchScreen.storyboard in Resources */,
 				776C785C276A4D9E004102BA /* Assets.xcassets in Resources */,
 				776C785A276A4D9B004102BA /* Main.storyboard in Resources */,
@@ -155,12 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776C7878276A9012004102BA /* MyAlbumsCollectionViewCell.swift in Sources */,
 				776C7857276A4D9B004102BA /* ViewController.swift in Sources */,
 				776C786E276A5122004102BA /* SearchViewController.swift in Sources */,
 				776C7853276A4D9B004102BA /* AppDelegate.swift in Sources */,
 				776C786C276A5112004102BA /* AlbumsViewController.swift in Sources */,
 				776C7868276A50E0004102BA /* MedialibraryViewController.swift in Sources */,
 				776C786A276A50F9004102BA /* ForYouViewController.swift in Sources */,
+				776C787D276C95E7004102BA /* MyAlbumsHeader.swift in Sources */,
+				776C787A276A902A004102BA /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
