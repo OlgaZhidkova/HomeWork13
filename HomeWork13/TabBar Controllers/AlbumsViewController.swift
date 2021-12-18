@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+class AlbumsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Properties
     
@@ -16,10 +16,12 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
     var firstSectionItems = [Item]()
     var secondSectionItems = [Item]()
     var thirdSectionItems = [ListItem]()
+    var fourthSectionItems = [ListItem]()
     
     static let firstSectionID = "firstSectionID"
     static let secondSectionID = "secondSectionID"
     static let thirdSectionID = "thirdSectionID"
+    static let fourthSectionID = "fourthSectionID"
     
     // MARK: - Lifecycle
 
@@ -31,13 +33,25 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
         configureFirstSection()
         configureSecondSection()
         configureThirdSection()
+        configureFourthSection()
         
-        collectionView.register(MyAlbumsCollectionViewCell.nib(), forCellWithReuseIdentifier: MyAlbumsCollectionViewCell.identifier)
-        collectionView.register(MediaTypeCollectionViewCell.nib(), forCellWithReuseIdentifier: MediaTypeCollectionViewCell.identifier)
+        collectionView.register(MyAlbumsCollectionViewCell.nib(),
+                                forCellWithReuseIdentifier: MyAlbumsCollectionViewCell.identifier)
+        collectionView.register(MediaTypeCollectionViewCell.nib(),
+                                forCellWithReuseIdentifier: MediaTypeCollectionViewCell.identifier)
         
-        collectionView.register(MyAlbumsHeader.self, forSupplementaryViewOfKind: AlbumsViewController.firstSectionID, withReuseIdentifier: MyAlbumsHeader.identifier)
-        collectionView.register(CommonAlbumsHeader.self, forSupplementaryViewOfKind: AlbumsViewController.secondSectionID, withReuseIdentifier: CommonAlbumsHeader.identifier)
-        collectionView.register(MediaTypeHeader.self, forSupplementaryViewOfKind: AlbumsViewController.thirdSectionID, withReuseIdentifier: MediaTypeHeader.identifier)
+        collectionView.register(MyAlbumsHeader.self,
+                                forSupplementaryViewOfKind: AlbumsViewController.firstSectionID,
+                                withReuseIdentifier: MyAlbumsHeader.identifier)
+        collectionView.register(CommonAlbumsHeader.self,
+                                forSupplementaryViewOfKind: AlbumsViewController.secondSectionID,
+                                withReuseIdentifier: CommonAlbumsHeader.identifier)
+        collectionView.register(MediaTypeHeader.self,
+                                forSupplementaryViewOfKind: AlbumsViewController.thirdSectionID,
+                                withReuseIdentifier: MediaTypeHeader.identifier)
+        collectionView.register(OthersHeader.self,
+                                forSupplementaryViewOfKind: AlbumsViewController.fourthSectionID,
+                                withReuseIdentifier: OthersHeader.identifier)
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -46,40 +60,99 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
     // MARK: - Configure
     
     func configureFirstSection() {
-        firstSectionItems.append(Item(text: "Недавние", imageName: "image_1", number: "1 234"))
-        firstSectionItems.append(Item(text: "Избранное", imageName: "image_2", number: "234"))
-        firstSectionItems.append(Item(text: "WhatsApp", imageName: "image_3", number: "1 089"))
-        firstSectionItems.append(Item(text: "Instagram", imageName: "image_4", number: "215"))
-        firstSectionItems.append(Item(text: "Фото", imageName: "image_5", number: "2 078"))
-        firstSectionItems.append(Item(text: "Путешествия", imageName: "image_6", number: "346"))
-        firstSectionItems.append(Item(text: "Обои", imageName: "image_7", number: "10"))
-        firstSectionItems.append(Item(text: "Фотосессия", imageName: "image_8", number: "35"))
+        firstSectionItems.append(contentsOf: [Item(text: "Недавние",
+                                                   imageName: "image_1",
+                                                   number: "1 234"),
+                                               Item(text: "Избранное",
+                                                   imageName: "image_2",
+                                                   number: "234"),
+                                               Item(text: "WhatsApp",
+                                                    imageName: "image_3",
+                                                    number: "1 089"),
+                                               Item(text: "Instagram",
+                                                    imageName: "image_4",
+                                                    number: "215"),
+                                               Item(text: "Фото",
+                                                    imageName: "image_5",
+                                                    number: "2 078"),
+                                               Item(text: "Путешествия",
+                                                    imageName: "image_6",
+                                                    number: "346"),
+                                               Item(text: "Обои",
+                                                    imageName: "image_7",
+                                                    number: "10"),
+                                               Item(text: "Фотосессия",
+                                                    imageName: "image_8",
+                                                    number: "35")])
     }
     
     func configureSecondSection() {
-        secondSectionItems.append(Item(text: "Дом", imageName: "image_5", number: "28"))
-        secondSectionItems.append(Item(text: "Природа", imageName: "image_6", number: "36"))
-        secondSectionItems.append(Item(text: "Город", imageName: "image_7", number: "10"))
-        secondSectionItems.append(Item(text: "Зима", imageName: "image_8", number: "15"))
+        secondSectionItems.append(contentsOf: [Item(text: "Дом",
+                                                    imageName: "image_5",
+                                                    number: "28"),
+                                               Item(text: "Природа",
+                                                    imageName: "image_6",
+                                                    number: "36"),
+                                               Item(text: "Город",
+                                                    imageName: "image_7",
+                                                    number: "10"),
+                                               Item(text: "Зима",
+                                                    imageName: "image_8",
+                                                    number: "15")])
     }
     
     func configureThirdSection() {
-        thirdSectionItems.append(ListItem(title: "Видео", icon: UIImage(systemName: "video"), number: "167", buttonIcon: UIImage(systemName: "chevron.right")))
-        thirdSectionItems.append(ListItem(title: "Селфи", icon: UIImage(systemName: "person.crop.square"), number: "160", buttonIcon: UIImage(systemName: "chevron.right")))
-        thirdSectionItems.append(ListItem(title: "Фото Live Photos", icon: UIImage(systemName: "camera.aperture"), number: "1796", buttonIcon: UIImage(systemName: "chevron.right")))
-        thirdSectionItems.append(ListItem(title: "Портреты", icon: UIImage(systemName: "cube"), number: "16", buttonIcon: UIImage(systemName: "chevron.right")))
-        thirdSectionItems.append(ListItem(title: "Серии", icon: UIImage(systemName: "square.stack.3d.down.right"), number: "5", buttonIcon: UIImage(systemName: "chevron.right")))
-        thirdSectionItems.append(ListItem(title: "Снимки экрана", icon: UIImage(systemName: "camera.viewfinder"), number: "119", buttonIcon: UIImage(systemName: "chevron.right")))
+        thirdSectionItems.append(contentsOf: [
+            ListItem(title: "Видео",
+                     icon: UIImage(systemName: "video"),
+                     number: "167",
+                     buttonIcon: UIImage(systemName: "chevron.right")),
+            ListItem(title: "Селфи",
+                     icon: UIImage(systemName: "person.crop.square"),
+                     number: "160",
+                     buttonIcon: UIImage(systemName: "chevron.right")),
+            ListItem(title: "Фото Live Photos",
+                     icon: UIImage(systemName: "camera.aperture"),
+                     number: "1796",
+                     buttonIcon: UIImage(systemName: "chevron.right")),
+            ListItem(title: "Портреты",
+                     icon: UIImage(systemName: "cube"),
+                     number: "16",
+                     buttonIcon: UIImage(systemName: "chevron.right")),
+            ListItem(title: "Серии",
+                     icon: UIImage(systemName: "square.stack.3d.down.right"),
+                     number: "5",
+                     buttonIcon: UIImage(systemName: "chevron.right")),
+            ListItem(title: "Снимки экрана",
+                     icon: UIImage(systemName: "camera.viewfinder"),
+                     number: "119",
+                     buttonIcon: UIImage(systemName: "chevron.right"))])
+    }
+    
+    func configureFourthSection() {
+        fourthSectionItems.append(contentsOf: [
+            ListItem(title: "Импортированные",
+                     icon: UIImage(systemName: "square.and.arrow.down"),
+                     number: "249",
+                     buttonIcon: UIImage(systemName: "chevron.right")),
+            ListItem(title: "Скрытые",
+                     icon: UIImage(systemName: "eye.slash"),
+                     number: "0",
+                     buttonIcon: UIImage(systemName: "chevron.right")),
+                                                            
+            ListItem(title: "Недавно удаленные",
+                     icon: UIImage(systemName: "trash"),
+                     number: "179",
+                     buttonIcon: UIImage(systemName: "chevron.right"))])
     }
     
     // MARK: - Settings
     
     private func setupView() {
-        view.backgroundColor = .white
         title = "Альбомы"
         navigationController?.navigationBar.prefersLargeTitles = true
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayuot())
-        collectionView.backgroundColor = .white
+        collectionView = UICollectionView(frame: view.bounds,
+                                          collectionViewLayout: createLayuot())
     }
     
     private func setupHierarchy() {
@@ -92,17 +165,16 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
         case first = 0
         case second = 1
         case third = 2
+        case fourth = 3
     }
     
     private func firstSection() -> NSCollectionLayoutSection {
-        
         let item = NSCollectionLayoutItem(
-                layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1),
-                    heightDimension: .fractionalHeight(1)
-                )
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1)
             )
-        
+        )
         let group = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .absolute(190),
@@ -111,27 +183,30 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
             subitem: item,
             count: 2
         )
-        
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.boundarySupplementaryItems = [
-            NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40)), elementKind: AlbumsViewController.firstSectionID, alignment: .topLeading)
-        ]
+        section.boundarySupplementaryItems = [NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(40)
+            ),
+            elementKind: AlbumsViewController.firstSectionID,
+            alignment: .topLeading
+          )]
         section.contentInsets.leading = 20
         section.contentInsets.trailing = 20
+        section.contentInsets.bottom = 10
         
         return section
     }
     
     private func secondSection() -> NSCollectionLayoutSection {
-        
         let item = NSCollectionLayoutItem(
-                layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1),
-                    heightDimension: .fractionalHeight(1)
-                )
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1)
             )
-        
+        )
         let group = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .absolute(190),
@@ -140,34 +215,77 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
             subitem: item,
             count: 1
         )
-        
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.boundarySupplementaryItems = [
-            NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40)), elementKind: AlbumsViewController.secondSectionID, alignment: .topLeading)
-        ]
+        section.boundarySupplementaryItems = [NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(40)
+            ),
+            elementKind: AlbumsViewController.secondSectionID,
+            alignment: .topLeading
+          )]
         section.contentInsets.leading = 20
         section.contentInsets.trailing = 20
+        section.contentInsets.bottom = 10
         return section
     }
     
     private func thirdSection() -> NSCollectionLayoutSection {
-        
         let item = NSCollectionLayoutItem(
-                layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1),
-                    heightDimension: .fractionalHeight(1)
-                )
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1)
             )
-        
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(45)), subitems: [item])
-        
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(44)
+            ),
+            subitems: [item]
+        )
         let section = NSCollectionLayoutSection(group: group)
-        section.boundarySupplementaryItems = [
-            NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40)), elementKind: AlbumsViewController.thirdSectionID, alignment: .topLeading)
-        ]
+        section.boundarySupplementaryItems = [NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(40)
+            ),
+            elementKind: AlbumsViewController.thirdSectionID,
+            alignment: .topLeading
+        )]
         section.contentInsets.leading = 20
         section.contentInsets.trailing = 20
+        section.contentInsets.bottom = 10
+        return section
+    }
+    
+    private func fourthSection() -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .fractionalHeight(1)
+            )
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(44)
+            ),
+            subitems: [item]
+        )
+        let section = NSCollectionLayoutSection(group: group)
+        section.boundarySupplementaryItems = [NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(40)
+            ),
+            elementKind: AlbumsViewController.fourthSectionID,
+            alignment: .topLeading
+        )]
+        section.contentInsets.leading = 20
+        section.contentInsets.trailing = 20
+        section.contentInsets.bottom = 10
         return section
     }
     
@@ -175,7 +293,6 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     private func createLayuot() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnviroment) -> NSCollectionLayoutSection? in
-            
             switch Sections(rawValue: sectionIndex) {
             case .first:
                 return self.firstSection()
@@ -183,6 +300,8 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
                 return self.secondSection()
             case .third:
                 return self.thirdSection()
+            case .fourth:
+                return self.fourthSection()
             default:
                 return nil
             }
@@ -193,7 +312,7 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
     // MARK: - Data Sourse and Delegate methods
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -204,6 +323,8 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
             numberOfItems = secondSectionItems.count
         } else if section == 2 {
             numberOfItems = thirdSectionItems.count
+        } else if section == 3 {
+            numberOfItems = fourthSectionItems.count
         }
         return numberOfItems
     }
@@ -211,18 +332,31 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = UICollectionViewCell()
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCollectionViewCell.identifier, for: indexPath) as! MyAlbumsCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: MyAlbumsCollectionViewCell.identifier,
+                for: indexPath) as! MyAlbumsCollectionViewCell
             let item = firstSectionItems[indexPath.item]
             cell.configure(with: item)
             return cell
         } else if indexPath.section == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyAlbumsCollectionViewCell.identifier, for: indexPath) as! MyAlbumsCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: MyAlbumsCollectionViewCell.identifier,
+                for: indexPath) as! MyAlbumsCollectionViewCell
             let item = secondSectionItems[indexPath.item]
             cell.configure(with: item)
             return cell
         } else if indexPath.section == 2 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaTypeCollectionViewCell.identifier, for: indexPath) as! MediaTypeCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: MediaTypeCollectionViewCell.identifier,
+                for: indexPath) as! MediaTypeCollectionViewCell
             let item = thirdSectionItems[indexPath.item]
+            cell.configure(with: item)
+            return cell
+        } else if indexPath.section == 3 {
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: MediaTypeCollectionViewCell.identifier,
+                for: indexPath) as! MediaTypeCollectionViewCell
+            let item = fourthSectionItems[indexPath.item]
             cell.configure(with: item)
             return cell
         }
@@ -232,15 +366,31 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = UICollectionReusableView()
         if indexPath.section == 0 {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: AlbumsViewController.firstSectionID, withReuseIdentifier: MyAlbumsHeader.identifier, for: indexPath) as! MyAlbumsHeader
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: AlbumsViewController.firstSectionID,
+                withReuseIdentifier: MyAlbumsHeader.identifier,
+                for: indexPath) as! MyAlbumsHeader
             header.configure()
             return header
         } else if indexPath.section == 1 {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: AlbumsViewController.secondSectionID, withReuseIdentifier: CommonAlbumsHeader.identifier, for: indexPath) as! CommonAlbumsHeader
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: AlbumsViewController.secondSectionID,
+                withReuseIdentifier: CommonAlbumsHeader.identifier,
+                for: indexPath) as! CommonAlbumsHeader
             header.configure()
             return header
         } else if indexPath.section == 2 {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: AlbumsViewController.thirdSectionID, withReuseIdentifier: MediaTypeHeader.identifier, for: indexPath) as! MediaTypeHeader
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: AlbumsViewController.thirdSectionID,
+                withReuseIdentifier: MediaTypeHeader.identifier,
+                for: indexPath) as! MediaTypeHeader
+            header.configure()
+            return header
+        } else if indexPath.section == 3 {
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: AlbumsViewController.fourthSectionID,
+                withReuseIdentifier: OthersHeader.identifier,
+                for: indexPath) as! OthersHeader
             header.configure()
             return header
         }

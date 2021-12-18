@@ -9,11 +9,11 @@ import UIKit
 
 class MyAlbumsCollectionViewCell: UICollectionViewCell {
     
+    static let identifier = "MyAlbumsCollectionViewCell"
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var textLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
-    
-    static let identifier = "MyAlbumsCollectionViewCell"
     
     static func nib() -> UINib {
         return UINib(nibName: "MyAlbumsCollectionViewCell", bundle: nil)
@@ -26,7 +26,6 @@ class MyAlbumsCollectionViewCell: UICollectionViewCell {
     public func configure(with item: Item) {
         self.imageView.image = UIImage(named: item.imageName)
         self.imageView.layer.cornerRadius = 5
-        self.imageView.contentMode = .scaleAspectFill
         self.textLabel.text = item.text
         self.numberLabel.text = item.number
     }

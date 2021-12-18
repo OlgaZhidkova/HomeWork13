@@ -9,13 +9,12 @@ import UIKit
 
 class MediaTypeCollectionViewCell: UICollectionViewCell {
     
+    static let identifier = "MediaTypeCollectionViewCell"
     
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var buttonImage: UIImageView!
-    
-    static let identifier = "MediaTypeCollectionViewCell"
     
     static func nib() -> UINib {
         return UINib(nibName: "MediaTypeCollectionViewCell", bundle: nil)
@@ -23,6 +22,7 @@ class MediaTypeCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     public func configure(with item: ListItem) {
@@ -31,5 +31,4 @@ class MediaTypeCollectionViewCell: UICollectionViewCell {
         self.numberLabel.text = item.number
         self.buttonImage.image = item.buttonIcon
     }
-
 }
