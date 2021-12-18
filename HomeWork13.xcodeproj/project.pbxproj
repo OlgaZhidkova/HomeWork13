@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		776C7853276A4D9B004102BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7852276A4D9B004102BA /* AppDelegate.swift */; };
-		776C7855276A4D9B004102BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7854276A4D9B004102BA /* SceneDelegate.swift */; };
 		776C7857276A4D9B004102BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7856276A4D9B004102BA /* ViewController.swift */; };
 		776C785A276A4D9B004102BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776C7858276A4D9B004102BA /* Main.storyboard */; };
 		776C785C276A4D9E004102BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776C785B276A4D9E004102BA /* Assets.xcassets */; };
 		776C785F276A4D9E004102BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776C785D276A4D9E004102BA /* LaunchScreen.storyboard */; };
+		776C7868276A50E0004102BA /* MedialibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7867276A50E0004102BA /* MedialibraryViewController.swift */; };
+		776C786A276A50F9004102BA /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7869276A50F9004102BA /* ForYouViewController.swift */; };
+		776C786C276A5112004102BA /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C786B276A5112004102BA /* AlbumsViewController.swift */; };
+		776C786E276A5122004102BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C786D276A5122004102BA /* SearchViewController.swift */; };
+		776C7877276A9012004102BA /* MyAlbumsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776C7875276A9012004102BA /* MyAlbumsCollectionViewCell.xib */; };
+		776C7878276A9012004102BA /* MyAlbumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7876276A9012004102BA /* MyAlbumsCollectionViewCell.swift */; };
+		776C787A276A902A004102BA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7879276A902A004102BA /* Item.swift */; };
+		776C787D276C95E7004102BA /* MyAlbumsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C787C276C95E7004102BA /* MyAlbumsHeader.swift */; };
+		776C787F276CC156004102BA /* CommonAlbumsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C787E276CC156004102BA /* CommonAlbumsHeader.swift */; };
+		776C7882276D194B004102BA /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7881276D194B004102BA /* ListItem.swift */; };
+		776C7884276D1A79004102BA /* MediaTypeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7883276D1A79004102BA /* MediaTypeHeader.swift */; };
+		776C7887276D1CE8004102BA /* MediaTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7885276D1CE8004102BA /* MediaTypeCollectionViewCell.swift */; };
+		776C7888276D1CE8004102BA /* MediaTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776C7886276D1CE8004102BA /* MediaTypeCollectionViewCell.xib */; };
+		776C788A276D3809004102BA /* OthersHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C7889276D3809004102BA /* OthersHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		776C784F276A4D9B004102BA /* HomeWork13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		776C7852276A4D9B004102BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		776C7854276A4D9B004102BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		776C7856276A4D9B004102BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		776C7859276A4D9B004102BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		776C785B276A4D9E004102BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		776C785E276A4D9E004102BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776C7860276A4D9E004102BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776C7867276A50E0004102BA /* MedialibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedialibraryViewController.swift; sourceTree = "<group>"; };
+		776C7869276A50F9004102BA /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		776C786B276A5112004102BA /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		776C786D276A5122004102BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		776C7875276A9012004102BA /* MyAlbumsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAlbumsCollectionViewCell.xib; sourceTree = "<group>"; };
+		776C7876276A9012004102BA /* MyAlbumsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlbumsCollectionViewCell.swift; sourceTree = "<group>"; };
+		776C7879276A902A004102BA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		776C787C276C95E7004102BA /* MyAlbumsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsHeader.swift; sourceTree = "<group>"; };
+		776C787E276CC156004102BA /* CommonAlbumsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlbumsHeader.swift; sourceTree = "<group>"; };
+		776C7881276D194B004102BA /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		776C7883276D1A79004102BA /* MediaTypeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeHeader.swift; sourceTree = "<group>"; };
+		776C7885276D1CE8004102BA /* MediaTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		776C7886276D1CE8004102BA /* MediaTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		776C7889276D3809004102BA /* OthersHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +82,11 @@
 		776C7851276A4D9B004102BA /* HomeWork13 */ = {
 			isa = PBXGroup;
 			children = (
+				776C788C276E06C1004102BA /* Models */,
+				776C788B276E0654004102BA /* Section Headers */,
+				776C788D276E0886004102BA /* Cell Models */,
+				776C7866276A507F004102BA /* TabBar Controllers */,
 				776C7852276A4D9B004102BA /* AppDelegate.swift */,
-				776C7854276A4D9B004102BA /* SceneDelegate.swift */,
 				776C7856276A4D9B004102BA /* ViewController.swift */,
 				776C7858276A4D9B004102BA /* Main.storyboard */,
 				776C785B276A4D9E004102BA /* Assets.xcassets */,
@@ -65,6 +94,64 @@
 				776C7860276A4D9E004102BA /* Info.plist */,
 			);
 			path = HomeWork13;
+			sourceTree = "<group>";
+		};
+		776C7866276A507F004102BA /* TabBar Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				776C7867276A50E0004102BA /* MedialibraryViewController.swift */,
+				776C7869276A50F9004102BA /* ForYouViewController.swift */,
+				776C786B276A5112004102BA /* AlbumsViewController.swift */,
+				776C786D276A5122004102BA /* SearchViewController.swift */,
+			);
+			path = "TabBar Controllers";
+			sourceTree = "<group>";
+		};
+		776C787B276A9055004102BA /* Grid Cell */ = {
+			isa = PBXGroup;
+			children = (
+				776C7876276A9012004102BA /* MyAlbumsCollectionViewCell.swift */,
+				776C7875276A9012004102BA /* MyAlbumsCollectionViewCell.xib */,
+			);
+			path = "Grid Cell";
+			sourceTree = "<group>";
+		};
+		776C7880276D18CC004102BA /* List Cell */ = {
+			isa = PBXGroup;
+			children = (
+				776C7885276D1CE8004102BA /* MediaTypeCollectionViewCell.swift */,
+				776C7886276D1CE8004102BA /* MediaTypeCollectionViewCell.xib */,
+			);
+			path = "List Cell";
+			sourceTree = "<group>";
+		};
+		776C788B276E0654004102BA /* Section Headers */ = {
+			isa = PBXGroup;
+			children = (
+				776C787C276C95E7004102BA /* MyAlbumsHeader.swift */,
+				776C787E276CC156004102BA /* CommonAlbumsHeader.swift */,
+				776C7883276D1A79004102BA /* MediaTypeHeader.swift */,
+				776C7889276D3809004102BA /* OthersHeader.swift */,
+			);
+			path = "Section Headers";
+			sourceTree = "<group>";
+		};
+		776C788C276E06C1004102BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				776C7879276A902A004102BA /* Item.swift */,
+				776C7881276D194B004102BA /* ListItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		776C788D276E0886004102BA /* Cell Models */ = {
+			isa = PBXGroup;
+			children = (
+				776C787B276A9055004102BA /* Grid Cell */,
+				776C7880276D18CC004102BA /* List Cell */,
+			);
+			path = "Cell Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +212,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776C7877276A9012004102BA /* MyAlbumsCollectionViewCell.xib in Resources */,
 				776C785F276A4D9E004102BA /* LaunchScreen.storyboard in Resources */,
 				776C785C276A4D9E004102BA /* Assets.xcassets in Resources */,
 				776C785A276A4D9B004102BA /* Main.storyboard in Resources */,
+				776C7888276D1CE8004102BA /* MediaTypeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +227,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776C7887276D1CE8004102BA /* MediaTypeCollectionViewCell.swift in Sources */,
+				776C788A276D3809004102BA /* OthersHeader.swift in Sources */,
+				776C7878276A9012004102BA /* MyAlbumsCollectionViewCell.swift in Sources */,
 				776C7857276A4D9B004102BA /* ViewController.swift in Sources */,
+				776C786E276A5122004102BA /* SearchViewController.swift in Sources */,
+				776C7884276D1A79004102BA /* MediaTypeHeader.swift in Sources */,
 				776C7853276A4D9B004102BA /* AppDelegate.swift in Sources */,
-				776C7855276A4D9B004102BA /* SceneDelegate.swift in Sources */,
+				776C7882276D194B004102BA /* ListItem.swift in Sources */,
+				776C786C276A5112004102BA /* AlbumsViewController.swift in Sources */,
+				776C7868276A50E0004102BA /* MedialibraryViewController.swift in Sources */,
+				776C786A276A50F9004102BA /* ForYouViewController.swift in Sources */,
+				776C787F276CC156004102BA /* CommonAlbumsHeader.swift in Sources */,
+				776C787D276C95E7004102BA /* MyAlbumsHeader.swift in Sources */,
+				776C787A276A902A004102BA /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
