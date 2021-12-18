@@ -74,7 +74,7 @@
                 <outlet property="numberLabel" destination="t7Q-Qt-k09" id="jcY-Rf-1b9"/>
                 <outlet property="textLabel" destination="0Ma-IO-svS" id="fDh-0g-fW0"/>
             </connections>
-            <point key="canvasLocation" x="-76.08695652173914" y="2.34375"/>
+            <point key="canvasLocation" x="138" y="87"/>
         </collectionViewCell>
     </objects>
     <resources>
